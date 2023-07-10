@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundara Karma</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+   
+<header>
+  <div class="dropdown-container">
+    <button class="hamburger-button">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  
+        <div class="dropdown-content">
+            <a href="https://isrightrecords.store/pages/sundara-karma">Merch Store</a>
+            <a href="#tour-section">Tickets</a>
+            <a href="https://isrightrecords.store/pages/contact">Contact</a>
+        </div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="section1">
+    </section>
+  
+    
+  
+    <script>
+      // Get the required elements
+      const section1 = document.querySelector('.section1');
+    
+      // Function to handle scroll event
+      function handleScroll() {
+        const scrollPosition = window.scrollY;
+    
+        // Calculate the new background position based on the scroll position
+        const bgPosition = `${-scrollPosition * 1.4}px ${-scrollPosition * 0}px`;
+    
+        // Update the background position of the element
+        section1.style.backgroundPosition = bgPosition;
+    
+        // Add active class to section1
+        section1.classList.add('active');
+      }
+    
+      // Add event listener for scroll event
+      window.addEventListener('scroll', handleScroll);
+    </script>
+    
+    
+ 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section3img">
+  <img src="img/SL LOGO LOWREZsmall.png" alt="" class="logo">
+
+<div >
+<h1 class="outnow">OUR NEW ALBUM</h1>
+<h1 class="albumname">'Better Luck Next Time'</h1>
+<h1 class="outnow">OUT 27th OCTOBER 2023</h1>
+
+</div>
+
+
+<img class="fomaw"   src="img/ALBUM_MAIN_2.0.jpg" alt="">
+
+
+<div>
+  <a href="https://isrightrecords.store/pages/sundara-karma" class="button-57" role="button">
+    <span class="preorder" style="text-decoration: none;">PREORDER</span>
+    <span>PREORDER</span>
+  </a>
+</div>
+</section>
+
+
+<script>
+  // Select the section element
+const section = document.querySelector('.section3img');
+
+// Create an intersection observer instance
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    // If the section is 50% or more visible
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+      section.style.opacity = '1'; // Show the image
+    } else {
+      section.style.opacity = '0'; // Hide the image
+    }
+  });
+}, {
+  threshold: 0.5 // Trigger when 50% of the section is visible
+});
+
+// Start observing the section
+observer.observe(section);
+</script>
+
+
+
+
+
+
+
+
+
+
+<section class="postersection">
+  <img src="img/post (1).png" alt="" class="tour-poster">
+</section>
+
+<script>
+  // Select the elements
+  const posterSection = document.querySelector('.postersection');
+  const tourPoster = document.querySelector('.tour-poster');
+
+  // Function to handle scroll event
+  function handleScroll() {
+    const scrollPosition = window.scrollY;
+
+    // Calculate the threshold position for the image animation
+    const thresholdPosition = posterSection.offsetTop - window.innerHeight / 2;
+
+    // Add the "active" class to the tour-poster when the scroll position reaches the threshold
+    if (scrollPosition >= thresholdPosition) {
+      tourPoster.classList.add('active');
+    }
+  }
+
+  // Add event listener for scroll event
+  window.addEventListener('scroll', handleScroll);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<section class="tour-section" id="tour-section">
+  <h1 class="albumname">BUY TICKETS</h1>
+    <div class="tour-container">
+      <div class="scroll-indicator"></div>
+      <div id="seated-55fdf2c0" data-artist-id="93990b4d-0a95-40ee-892f-bf69631b3bdf" data-css-version="3"></div>
+    </div>
+  </section>
+
+
+
+  <script src="https://widget.seated.com/app.js"></script>
+
+  <script>
+    function isElementInViewport(element) {
+  var rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function showTourSection() {
+  var tourSection = document.getElementById('tour-section');
+  if (isElementInViewport(tourSection)) {
+    tourSection.classList.add('show');
+    window.removeEventListener('scroll', showTourSection);
+  }
+}
+
+window.addEventListener('scroll', showTourSection);
+
+  </script>
+
+
+
+
+
+
+
+
+<section class="section2">
+
+  <div class="form-container">
+   
+
+
+    <div class="sign_tour">
+      <a href="" class="signa">Sign Up To Our Mailing list</a>
+  </div>
+
+
+  <div class="socials">
+    <a href="https://www.facebook.com/SundaraKarma/?locale=en_GB">
+      <img src="img/fb.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/sundarakarma/?hl=en">
+      <img src="img/ig.png" alt="Instagram">
+    </a>
+    <a href="https://twitter.com/sundarakarma
+    ">
+      <img src="img/twit.png" alt="Twitter">
+    </a>
+    <a href="https://www.youtube.com/channel/UCrtA6GG5r3jT2F9k4N6FxaQ">
+      <img src="img/yt.png" alt="YouTube">
+    </a>
+  </div>
+    
+    
+ 
+
+
+
+
+
+
+<!-- Pop-up modal -->
+<div id="signup-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Sign Up To Our Mailing List</h2>
+    <form id="signup-form">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>loving you always and forever</p>
+  </div>
+</div>
+
+
+<script>
+// Get the sign-up anchor tag and the modal element
+const signUpLink = document.querySelector('.signa');
+const modal = document.getElementById('signup-modal');
+
+// Get the close button element
+const closeBtn = document.querySelector('.close');
+
+// Open the modal when the sign-up link is clicked
+signUpLink.addEventListener('click', function(e) {
+  e.preventDefault(); // Prevent the default link behavior
+  modal.style.display = 'block'; // Show the modal
+});
+
+// Close the modal when the close button is clicked
+closeBtn.addEventListener('click', function() {
+  modal.style.display = 'none'; // Hide the modal
+});
+
+// Close the modal when clicking outside of it
+window.addEventListener('click', function(e) {
+  if (e.target === modal) {
+    modal.style.display = 'none'; // Hide the modal
+  }
+});
+
+// Handle the form submission
+const signupForm = document.getElementById('signup-form');
+signupForm.addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent form submission
+  // Add your code here to handle the form data
+});
+</script>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

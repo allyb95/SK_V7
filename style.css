@@ -1,0 +1,796 @@
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+background-color: #fcfcfc;
+font-family: A-font;
+margin: 0;
+}
+
+
+.logodiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 100;
+}
+
+h1 {
+  z-index: 99;
+  color: #f2f2f2;
+  text-align: center;
+  font-family: A-font;
+  font-size: 30px;
+}
+
+h2 {
+  z-index: 99;
+  color: #f2f2f2;
+  text-align: center;
+  font-family: A-font;
+}
+
+
+p{
+  color: #ccc;
+  font-family: A-font;
+}
+
+
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 16rem;
+  width: 100vw;
+  background-image: url('img/topimg.JPG');
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+ 
+  z-index: 99;
+  transition: ease-in-out 1.2s;
+  position: relative;
+  bottom: 0px;
+  transition: left 0.3s ease;
+}
+
+.section1.active {
+  transform: translateY(calc(-1 * var(--scroll-pos) *100px));
+}
+
+
+
+
+@media screen and (min-width: 600px) {
+  .section1 {
+    height: 25rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .section1 {
+    height: 35rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .section1 {
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+.logo {
+  height: 11rem;
+  z-index: 99;
+  transition: ease-in-out 1.2s;
+  position: relative;
+  transition: left 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.dropdown-content {
+  opacity: 0;
+  height: 0;
+  position: absolute;
+  background-color: #f9f9f9da;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  right: 0;
+  text-align: right;
+  transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: ease-in-out 0.5s;
+  z-index: 99999;
+}
+
+.dropdown-container:hover .dropdown-content {
+  opacity: 1;
+  height: auto;
+  transition: opacity 1s ease-in-out, height 1s ease-in-out;
+  z-index: 99;
+  font-size: 1.4rem;
+}
+
+.hamburger-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #4b4b4b;
+  margin-bottom: 4px;
+  transition: ease-in-out 1s;
+}
+
+.dropdown-container:hover .hamburger-button .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.dropdown-container:hover .hamburger-button .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.dropdown-container:hover .hamburger-button .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+
+
+
+
+
+.socials{
+  display: inline-block;
+  cursor: pointer;
+  transition: ease-in-out .5s;
+  text-align: center;
+  
+  
+}
+
+.socials img {
+  height: 25px;
+}
+
+
+.preorder{
+  text-decoration: none;
+}
+
+
+
+
+
+
+.section3img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Align content to the bottom */
+  height: 100vh;
+  width: 100vw;
+  transition: ease-in-out 1.2s;
+  opacity: 0; /* Initially hidden */
+}
+
+
+
+
+
+.fomaw{
+  height: 350px;
+  
+}
+
+@font-face{
+  font-family: A-font;
+  src: url(img/Arachne-Mortal.ttf);
+}
+
+
+
+
+
+
+.outnow{
+  color: #292929;
+font-family: A-font;
+margin: 10px;
+  
+}
+
+
+.albumname{
+  font-style: italic;
+  color: #292929;
+font-family: A-font;
+margin: 10px;
+}
+
+
+
+
+
+.postersection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100vw;
+  background-color: #ffffff;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: ease-in-out 1.6s;
+  overflow: hidden; /* Hide any content outside the section */
+}
+
+.tour-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.6s ease-out; /* Apply transition to the transform property */
+  transform: translateY(100%); /* Start the image outside the viewport */
+}
+
+.tour-poster.active {
+  transform: translateY(0); /* Move the image into the viewport */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 30vh;
+  width: 100vw;
+  background-color: #ffffff;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: ease-in-out 1s;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section3{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 2rem;
+    height: 100vh;
+    background-color: #ffffff;
+    justify-content: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* CSS */
+.button-57 {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #18181a;
+    color: #18181a;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 60px;
+    line-height: 40px;
+    padding: 18px 18px 17px;
+    cursor: pointer;
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  text-decoration: none;
+    font-family: A-font;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+  }
+  
+  .button-57 span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+  }
+  
+  .button-57 span:last-child {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+  }
+  
+  .button-57:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+  }
+  
+  .button-57:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+  }
+  
+  .button-57:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  }
+
+
+
+
+
+
+
+
+  .button-58 {
+    position: relative;
+    overflow: hidden;
+    border: 0px;
+    color: #333;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    line-height: 60px;
+    padding: 18px 18px 17px;
+    cursor: pointer;
+    background: #ffffff00;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: 1rem;
+    
+  }
+  
+  .button-58 span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+  }
+  
+  .button-58 span:last-child {
+    color: rgb(207, 207, 207);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+  }
+  
+  .button-58:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+  }
+  
+  .button-58:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+  }
+  
+  .button-58:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .tour-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+    color: #000000;
+    opacity: 1;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+   z-index: 9999999;
+    
+  }
+
+
+  .tour-section.show {
+    opacity: 1;
+    transform: translateY(0);
+ 
+  }
+
+
+  
+  .tour-container {
+    max-width: 95%;
+    height: 90%;
+    overflow-y: auto;
+    width: 100%;
+   
+  }
+
+  
+.seated-event-date-cell{
+  color: #000000;
+  
+}
+
+
+
+.seated-event-venue-cell{
+  color: #000000;
+
+}
+
+
+.seated-event-row{
+  z-index: 99999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  .tour-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Anonymous Pro', monospace;
+  }
+  
+  .tour-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    z-index: 999999;
+    
+  }
+  
+  .tour-date {
+    font-weight: bold;
+  }
+  
+  .tour-venue {
+    margin-right: 20px;
+  }
+  
+  .tour-location {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .tour-ticket {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 1px;
+    text-decoration: none;
+    transition: ease-in-out .5s;
+  }
+
+  .tour-ticket:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .form-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: A-font;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    color: #cccccc;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+
+
+
+.sign_tour a{
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: ease-in-out .5s;
+  color: #000000;
+}
+
+
+.sign_tour a:hover{
+  font-size: 2.08rem;
+  transition: ease-in-out .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.live{
+  margin-top: 3rem;
+  font-family: A-font;
+}
+
+
+
+
+
+
+  /* Styling for the modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 1s;
+  }
+  
+  .modal-content {
+    background-color: #000000af;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    width: 80%;
+    max-width: 500px;
+    transition: ease-in-out 1s;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: ease-in-out 1s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #8f8f8f;
+    text-decoration: none;
+    cursor: pointer;
+    transition: ease-in-out 1s;
+  }
+  
+  .modal-content button {
+    color: rgb(245, 245, 245);
+    background-color: #ffffff00;
+    cursor: pointer;
+    transition: ease-in-out 1s;
+    width: 8rem;
+    margin-top: 1rem;
+    font-family: A-font;
+    height: 3rem;
+  }
+
+  .modal-content button:hover{
+    background-color: white;
+    color: black;
+  }
+
+
+
+
+
+.modal label{
+  color: white;
+}
+
+
+
+
+
